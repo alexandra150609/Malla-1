@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff0f5;
+  background-color: #fff0f5; /* rosado claro */
   margin: 0;
   padding: 20px;
   display: flex;
@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  color: #c2185b;
+  color: #c2185b; /* rosa fuerte */
   margin-bottom: 20px;
   text-align: center;
 }
@@ -22,7 +22,7 @@ h1 {
 }
 
 .cycle-column {
-  background-color: #ffffff;
+  background-color: #ffffff; /* blanco */
   border-radius: 12px;
   padding: 12px;
   width: 300px;
@@ -32,27 +32,26 @@ h1 {
 .cycle-title {
   font-size: 18px;
   font-weight: bold;
-  color: #d81b60;
+  color: #d81b60; /* rosa fuerte */
   text-align: center;
   margin-bottom: 10px;
 }
 
 .course-card {
-  background: #fce4ec;
-  border-left: 6px solid #ec407a;
+  background: #fce4ec; /* rosado muy claro */
+  border-left: 6px solid #ec407a; /* rosa intermedio */
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  position: relative;
   opacity: 1;
   transition: opacity 0.3s;
 }
 
 .course-card input[type="checkbox"] {
   margin-right: 8px;
-  accent-color: #ec407a;
+  accent-color: #ec407a; /* color del check rosado */
 }
 
 .course-card.locked {
@@ -61,59 +60,6 @@ h1 {
 }
 
 .course-card.completed {
-  background-color: #f8bbd0;
-  border-left-color: #ad1457;
-}
-
-.course-card.completed label {
-  text-decoration: line-through;
-  color: #888;
-}
-
-/* Tooltip personalizado */
-.course-card.completed::after {
-  content: "Curso aprobado";
-  position: absolute;
-  bottom: 100%;
-  left: 10px;
-  background-color: #ad1457;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 6px;
-  white-space: nowrap;
-  font-size: 12px;
-  opacity: 0;
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.course-card.completed:hover::after {
-  opacity: 1;
-  transform: translateY(-10px);
-}
-
-.ciclo-completo {
-  background-color: #f8bbd0;
-  color: #880e4f;
-  border-radius: 8px;
-  padding: 8px;
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  animation: aparecer 0.4s ease-in-out;
-}
-
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  background-color: #f8bbd0; /* rosado pastel */
+  border-left-color: #ad1457; /* rosa intenso */
 }
