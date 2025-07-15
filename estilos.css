@@ -67,3 +67,32 @@ h1 {
   text-decoration: line-through;
   color: #888; /* color gris para mayor claridad */
 }
+/* Estilo del tooltip personalizado */
+.course-card.completed {
+  position: relative;
+}
+
+/* Contenedor invisible que aparece al pasar el mouse */
+.course-card.completed::after {
+  content: "Curso aprobado";
+  position: absolute;
+  bottom: 100%;
+  left: 10px;
+  background-color: #ad1457;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Mostrar la burbuja al hacer hover */
+.course-card.completed:hover::after {
+  opacity: 1;
+  transform: translateY(-10px);
+}
