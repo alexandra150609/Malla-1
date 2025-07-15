@@ -95,16 +95,9 @@ const malla = {
 
 let estadoCursos = JSON.parse(localStorage.getItem("estadoCursos")) || {};
 
-if (todosCompletados) {
-  const mensaje = document.createElement("div");
-  mensaje.className = "ciclo-completo";
-
-  // Elegir frase aleatoria y reemplazar {ciclo}
-  const frase = frasesMotivadoras[Math.floor(Math.random() * frasesMotivadoras.length)];
-  mensaje.textContent = frase.replace("{ciclo}", ciclo);
-
-  columna.appendChild(mensaje);
-}
+function crearMalla() {
+  const board = document .getElementById("Kanban-board");
+  board.innerHTML = "";
 
   for (const ciclo in malla) {
     const columna = document.createElement("div");
