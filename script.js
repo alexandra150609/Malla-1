@@ -1,15 +1,3 @@
-const frasesMotivadoras = [
-  "🎉 ¡Felicidades! Has completado el Ciclo {ciclo}. Cada paso te acerca más a tu meta.",
-  "✨ ¡Gran trabajo! Estás construyendo el futuro profesional que soñaste.",
-  "📚 ¡Un ciclo más superado! Tu esfuerzo está dando frutos.",
-  "🧠 ¡Ciclo {ciclo} completado con éxito! Sigue adelante, lo estás haciendo increíble.",
-  "🚀 ¡Vas con todo! Ya estás más cerca de convertirte en profesional de la salud.",
-  "💪 ¡Muy bien! Cada ciclo aprobado es una prueba de tu determinación.",
-  "🌈 ¡Ciclo completo! Nunca subestimes el poder de avanzar paso a paso.",
-  "🔬 ¡Excelente! Has dominado otro nivel en tu formación como tecnóloga médica.",
-  "🏁 ¡Otro ciclo más! Vas marcando tu camino con constancia.",
-  "🎓 ¡Bravo! Has conquistado el Ciclo {ciclo}. ¡Sigue brillando!"
-];
 const malla = {
   1: [
     { id: "tecnicas_salud", nombre: "Técnicas básicas en atención de salud" },
@@ -96,7 +84,7 @@ const malla = {
 let estadoCursos = JSON.parse(localStorage.getItem("estadoCursos")) || {};
 
 function crearMalla() {
-  const board = document .getElementById("Kanban-board");
+  const board = document.getElementById("kanban-board");
   board.innerHTML = "";
 
   for (const ciclo in malla) {
