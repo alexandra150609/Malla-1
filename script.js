@@ -23,8 +23,8 @@ const malla = {
     { id: "ingles1", nombre: "Inglés 1", requisitos: [] }
   ],
   2: [
-    { id: "org", nombre: "Fundamentos de química orgánica", requisitos: ["quimica1"] },
-    { id: "biologia", nombre: "Biología general", requisitos: [] },
+    { id: "quimica2", nombre: "Fundamentos de química orgánica", requisitos: ["quimica1"] },
+    { id: "bio", nombre: "Biología general", requisitos: [] },
     { id: "fisica", nombre: "Física básica", requisitos: ["mate"] },
     { id: "com2", nombre: "Comunicación y redacción II", requisitos: ["com1"] },
     { id: "cultura", nombre: "Cultura ambiental y desarrollo sostenible", requisitos: [] },
@@ -33,64 +33,64 @@ const malla = {
     { id: "ingles2", nombre: "Inglés 2", requisitos: ["ingles1"] }
   ],
   3: [
-    { id: "morfo", nombre: "Fundamentos de morfofisiología", requisitos: ["biologia", "org"] },
+    { id: "morfo", nombre: "Fundamentos de morfofisiología", requisitos: ["bio", "quimica2"] },
     { id: "equipos", nombre: "Diseño, seguridad y automatización en equipos de laboratorio clínico", requisitos: [] },
     { id: "electiva1", nombre: "Asignatura electiva I", requisitos: [] },
-    { id: "actividad1", nombre: "Actividad complementaria I", requisitos: [] },
+    { id: "complementaria1", nombre: "Actividad complementaria I", requisitos: [] },
     { id: "ingles3", nombre: "Inglés 3", requisitos: ["ingles2"] }
   ],
   4: [
     { id: "estadistica", nombre: "Estadística", requisitos: ["mate"] },
-    { id: "fisio", nombre: "Fisiopatología general", requisitos: ["morfo"] },
-    { id: "bioq", nombre: "Bioquímica y biología molecular", requisitos: ["biologia", "org", "fisica"] },
+    { id: "fisiopato", nombre: "Fisiopatología general", requisitos: ["morfo"] },
+    { id: "bioq", nombre: "Bioquímica y biología molecular", requisitos: ["bio", "quimica2", "fisica"] },
     { id: "farmaco", nombre: "Farmacología clínica aplicada", requisitos: [] },
     { id: "hemato1", nombre: "Hematología general", requisitos: ["morfo"] },
-    { id: "anatomia", nombre: "Técnicas en anatomía patológica y citología exfoliativa", requisitos: ["morfo"] },
+    { id: "anato", nombre: "Técnicas en anatomía patológica y citología exfoliativa", requisitos: ["morfo"] },
     { id: "ingles4", nombre: "Inglés 4", requisitos: ["ingles3"] }
   ],
   5: [
-    { id: "quimicaClinica", nombre: "Química clínica general", requisitos: ["equipos", "bioq"] },
+    { id: "quimicaClin", nombre: "Química clínica general", requisitos: ["equipos", "bioq"] },
     { id: "inmuno1", nombre: "Inmunología general", requisitos: ["bioq"] },
     { id: "hemato2", nombre: "Hematología especial", requisitos: ["hemato1"] },
-    { id: "cito", nombre: "Citotecnología exfoliativa", requisitos: ["morfo", "anatomia"] },
+    { id: "citoExfo", nombre: "Citotecnología exfoliativa", requisitos: ["morfo", "anato"] },
     { id: "electiva2", nombre: "Asignatura electiva II", requisitos: [] },
-    { id: "actividad2", nombre: "Actividad complementaria II", requisitos: [] }
+    { id: "complementaria2", nombre: "Actividad complementaria II", requisitos: [] }
   ],
   6: [
-    { id: "quimicaEsp", nombre: "Química clínica especial", requisitos: ["quimicaClinica"] },
+    { id: "quimicaEsp", nombre: "Química clínica especial", requisitos: ["quimicaClin"] },
     { id: "inmuno2", nombre: "Inmunología especial", requisitos: ["inmuno1"] },
     { id: "citogenetica", nombre: "Citogenética humana", requisitos: ["hemato2", "bioq"] },
     { id: "bacterio", nombre: "Bacteriología", requisitos: ["bioq"] },
     { id: "electiva3", nombre: "Asignatura electiva III", requisitos: [] },
-    { id: "actividad3", nombre: "Actividad complementaria III", requisitos: [] }
+    { id: "complementaria3", nombre: "Actividad complementaria III", requisitos: [] }
   ],
   7: [
-    { id: "investigacion", nombre: "Metodología de la investigación", requisitos: ["estadistica"] },
+    { id: "metodologia", nombre: "Metodología de la investigación", requisitos: ["estadistica"] },
     { id: "etica", nombre: "Ética y deontología", requisitos: ["sociales"] },
     { id: "parasito", nombre: "Parasitología", requisitos: ["inmuno2"] },
-    { id: "mico", nombre: "Micología", requisitos: ["inmuno1"] },
+    { id: "micologia", nombre: "Micología", requisitos: ["inmuno1"] },
     { id: "virologia", nombre: "Virología", requisitos: ["inmuno2"] },
-    { id: "banco", nombre: "Hemoterapia y Banco de sangre", requisitos: ["hemato1"] }
+    { id: "hemoterapia", nombre: "Hemoterapia y Banco de sangre", requisitos: ["hemato1"] }
   ],
   8: [
-    { id: "epi", nombre: "Epidemiología y salud pública", requisitos: ["mate"] },
+    { id: "epidemio", nombre: "Epidemiología y salud pública", requisitos: ["mate"] },
     { id: "legislacion", nombre: "Legislación en salud", requisitos: ["sociales"] },
-    { id: "taller", nombre: "Taller de diseño de proyecto de investigación", requisitos: ["investigacion"] },
-    { id: "gestionAdmin", nombre: "Gestión y administración en servicios de salud", requisitos: ["estadistica", "investigacion"] },
-    { id: "calidad", nombre: "Gestión de calidad en el laboratorio clínico", requisitos: ["hemato2", "quimicaEsp", "bacterio", "inmuno2", "banco", "cito"] },
-    { id: "necropsia", nombre: "Técnicas en necropsia y patología forense", requisitos: ["cito"] },
-    { id: "actividad4", nombre: "Actividad complementaria IV", requisitos: [] }
+    { id: "taller", nombre: "Taller de diseño de proyecto de investigación", requisitos: ["metodologia"] },
+    { id: "gestionAdmin", nombre: "Gestión y administración en servicios de salud", requisitos: ["estadistica", "metodologia"] },
+    { id: "gestionCalidad", nombre: "Gestión de calidad en el laboratorio clínico", requisitos: ["hemato2", "quimicaEsp", "bacterio", "inmuno2", "hemoterapia", "citoExfo"] },
+    { id: "necropsia", nombre: "Técnicas en necropsia y patología forense", requisitos: ["citoExfo"] },
+    { id: "complementaria4", nombre: "Actividad complementaria IV", requisitos: [] }
   ],
   9: [
-    { id: "practicaHemato", nombre: "Práctica clínica hospitalaria en Hematología", requisitos: [] },
+    { id: "practicaHema", nombre: "Práctica clínica hospitalaria en Hematología", requisitos: [] },
     { id: "practicaBanco", nombre: "Práctica clínica hospitalaria en Hemoterapia y Banco de sangre", requisitos: [] },
-    { id: "practicaMicro", nombre: "Práctica clínica hospitalaria en Microbiología", requisitos: [] }
+    { id: "practicaMicro", nombre: "Práctica clínica hospitalaria en Microbiología", requisitos: ["quimica1"] } // simbólicamente representa “todo aprobado”
   ],
   10: [
-    { id: "trabajo", nombre: "Trabajo de investigación", requisitos: ["taller"] },
-    { id: "practicaInmuno", nombre: "Práctica clínica hospitalaria en inmunodiagnóstico", requisitos: [] },
-    { id: "practicaQuimica", nombre: "Práctica clínica hospitalaria en química clínica", requisitos: [] },
-    { id: "practicaAnatomia", nombre: "Práctica clínica hospitalaria en anatomía patológica", requisitos: [] }
+    { id: "investigacion", nombre: "Trabajo de investigación", requisitos: ["taller"] },
+    { id: "practicaInmuno", nombre: "Práctica clínica hospitalaria en inmunodiagnóstico", requisitos: ["quimica1"] },
+    { id: "practicaQuimica", nombre: "Práctica clínica hospitalaria en química clínica", requisitos: ["quimica1"] },
+    { id: "practicaAnato", nombre: "Práctica clínica hospitalaria en anatomía patológica", requisitos: ["quimica1"] }
   ]
 };
 
@@ -104,9 +104,11 @@ function crearMalla() {
     const columna = document.createElement("div");
     columna.className = "cycle-column";
 
+    const todosCompletados = malla[ciclo].every(curso => estadoCursos[curso.id]);
+
     const titulo = document.createElement("div");
     titulo.className = "cycle-title";
-    titulo.textContent = `Ciclo ${ciclo}`;
+    titulo.innerHTML = `Ciclo ${ciclo} ${todosCompletados ? '<span title="Ciclo aprobado">🌟</span>' : ''}`;
     columna.appendChild(titulo);
 
     malla[ciclo].forEach(curso => {
@@ -128,7 +130,6 @@ function crearMalla() {
       columna.appendChild(card);
     });
 
-    const todosCompletados = malla[ciclo].every(curso => estadoCursos[curso.id]);
     if (todosCompletados && !document.getElementById(`mensaje-ciclo-${ciclo}`)) {
       const mensaje = document.createElement("div");
       mensaje.className = "ciclo-completo";
@@ -139,11 +140,14 @@ function crearMalla() {
 
       columna.appendChild(mensaje);
 
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 }
-      });
+      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+
+      setTimeout(() => {
+        mensaje.classList.add("fade-out");
+        setTimeout(() => {
+          mensaje.remove();
+        }, 1000);
+      }, 4000);
     }
 
     board.appendChild(columna);
@@ -163,6 +167,7 @@ function aplicarBloqueos() {
       if (completado) {
         card.classList.add("completed");
         check.checked = true;
+        card.title = "Curso aprobado";
       }
 
       const bloqueado = curso.requisitos.some(pr => !estadoCursos[pr]);
