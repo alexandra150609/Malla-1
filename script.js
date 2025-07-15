@@ -15,7 +15,7 @@ const malla = {
     { id: "fisica_basica", nombre: "Física básica", dependeDe: ["matematicas_basicas"] },
     { id: "comunicacion_2", nombre: "Comunicación y redacción II", dependeDe: ["comunicacion_1"] },
     { id: "cultura_ambiental", nombre: "Cultura ambiental y desarrollo sostenible" },
-    { id: "pensamiento_cientifico", nombre: "Pensamiento científico e investigador" },
+    { id: "pensamiento_cientifico", nombre: "Pensamiento científico e investigación" },
     { id: "ciencias_sociales", nombre: "Ciencias Sociales en el contexto actual" },
     { id: "ingles_2", nombre: "Inglés 2", dependeDe: ["ingles_1"] }
   ],
