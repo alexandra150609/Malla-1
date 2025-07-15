@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #e0f7fa;
+  background-color: #fff0f5; /* rosado claro */
   margin: 0;
   padding: 20px;
   display: flex;
@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  color: #01579b;
+  color: #c2185b; /* rosa fuerte */
   margin-bottom: 20px;
   text-align: center;
 }
@@ -22,24 +22,24 @@ h1 {
 }
 
 .cycle-column {
-  background-color: #ffffff;
+  background-color: #ffffff; /* blanco */
   border-radius: 12px;
   padding: 12px;
   width: 300px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .cycle-title {
   font-size: 18px;
   font-weight: bold;
-  color: #0288d1;
+  color: #d81b60; /* rosa fuerte */
   text-align: center;
   margin-bottom: 10px;
 }
 
 .course-card {
-  background: #e1f5fe;
-  border-left: 6px solid #0288d1;
+  background: #fce4ec; /* rosado muy claro */
+  border-left: 6px solid #ec407a; /* rosa intermedio */
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
@@ -51,6 +51,7 @@ h1 {
 
 .course-card input[type="checkbox"] {
   margin-right: 8px;
+  accent-color: #ec407a; /* color del check rosado */
 }
 
 .course-card.locked {
@@ -59,6 +60,6 @@ h1 {
 }
 
 .course-card.completed {
-  background-color: #b2ebf2;
-  border-left-color: #00796b;
+  background-color: #f8bbd0; /* rosado pastel */
+  border-left-color: #ad1457; /* rosa intenso */
 }
