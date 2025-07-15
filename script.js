@@ -129,7 +129,10 @@ function aplicarBloqueos() {
       const checkbox = document.getElementById(curso.id);
       const completado = estadoCursos[curso.id];
 
-      if (completado) card.classList.add("completed");
+      if (completado) {
+  card.classList.add("completed");
+  card.title = "Curso aprobado";
+}
 
       if (curso.dependeDe) {
         const depsCumplidos = curso.dependeDe.every(id => estadoCursos[id]);
