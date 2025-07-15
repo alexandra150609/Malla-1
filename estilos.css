@@ -63,3 +63,7 @@ h1 {
   background-color: #f8bbd0; /* rosado pastel */
   border-left-color: #ad1457; /* rosa intenso */
 }
+.course-card.completed label {
+  text-decoration: line-through;
+  color: #888; /* color gris para mayor claridad */
+}
